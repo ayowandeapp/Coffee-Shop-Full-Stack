@@ -63,7 +63,7 @@ def get_drinks_detail(token):
     return jsonify({
         'success': True,
         'drinks': drinks_dict
-    })
+        })
 
 '''
 @TODO implement endpoint
@@ -88,7 +88,7 @@ def add_drink(token):
         return jsonify({
             'success': True,
             'drinks': [drink.long()]
-    })
+            })
     except:
         abort(422)
     
@@ -126,7 +126,7 @@ def edit_drink_by_id(*args, **kwargs):
         return jsonify({
             'success': True,
             'drinks': [get_drink.long()]
-    })
+            })
     except:
         abort(422)
 
@@ -156,7 +156,7 @@ def delete_drink(*args, **kwargs):
         return jsonify({
             'success': True,
             'delete': get_id
-    })
+            })
     except:
         abort(422)
 # Error Handling

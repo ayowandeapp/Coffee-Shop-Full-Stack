@@ -8,8 +8,9 @@ DB_USER = 'postgres'
 DB_PASSWORD = 'admin'
 database_filename = "database.db"
 project_dir = os.path.dirname(os.path.abspath(__file__))
-database_path = 'postgresql://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST, 'coffee')
-#database_path = 'postgresql://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST,os.path.join(project_dir, database_filename))
+#database_path = 'postgresql://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST, 'coffee')
+#database_path = 'sqlite://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST,os.path.join(project_dir, database_filename))
+database_path = "sqlite:///{}".format(os.path.join(project_dir, database_filename))
 #print('ok')
 db = SQLAlchemy()
 
